@@ -1,0 +1,161 @@
+==== CLASSROOM ====
+BUILDING	ROOM_NU   CAPACITY
+--------------- ------- ----------
+LH1		2.1		80
+LH1		2.2		80
+LH1		1.2		80
+LH1		1.1	    100
+LH3		1.1		80
+LH2		1.1	    100
+LH2		1.2		80
+LH3		1.2		80
+LH2		2.1		80
+LH2		2.2		80
+
+
+==== DEPARTMENT====
+DEPT_NAME	     BUILDING		 BUDGET
+-------------------- --------------- ----------
+MACS		     LH1		1000000
+Computer	     LH1		5000000
+Chemical	     LH2		2000000
+Bio Tech	     LH2		1500000
+Civil		     LH3		2500000
+Mechanical	     LH3		3500000
+Electrical	     LH3		3500000
+Electronics	     LH1		4000000
+IT		         LH1	   	4000000
+
+
+==== COURSE ====
+CORS_ID   TITLE						    DEPT_NAME		    CREDITS
+-------- -------------------------------------------------- -----
+MA01	 Programming					    MACS			  6
+MA02	 Discrete Maths 				    MACS			  6
+MA03	 Accounts					        MACS			  4
+MA04	 DBMS						        MACS			  6
+CS01	 Python 					        Computer		  6
+CS02	 Algorithms					        Computer		  6
+CS03	 OOPs						        Computer		  6
+CS04	 Machine Learning				    Computer		  6
+CM01	 Organic					        Chemical		  6
+CM02	 Inorganic					        Chemical		  6
+
+
+
+==== INSTRUCTOR ====
+ID    NAME		   DEPT_NAME		    SALARY
+----- -------------------- -------------------- ----------
+INS01 Sonali		   MACS 		     55000
+INS02 Kamath Sr 	   MACS 		     80000
+INS03 Kamath Jr 	   Computer		     40000
+INS04 Archita		   Computer		     55000
+INS05 Hamsa		       Computer		     50000
+INS06 Nandgopal 	   MACS 		     60000
+INS07 Amit		       Chemical		     60000
+INS08 Abhishek		   Chemical		     60000
+INS09 Praveen		   MACS 		     70000
+INS10 Jayant		   Computer		     65000
+
+
+==== SECTION ====
+COURSE_I SEC_ID   SEMEST       YEAR BUILDING	    ROOM_NU TIME
+-------- -------- ------ ---------- --------------- ------- ----
+MA01	 SEC01	  Fall	       2020 LH1 	    1.1     TS01
+MA02	 SEC02	  Winter       2021 LH1 	    1.2     TS02
+MA03	 SEC03	  Summer       2022 LH2 	    2.1     TS03
+MA04	 SEC04	  Spring       2022 LH2 	    2.2     TS01
+CS01	 SEC05	  Fall	       2021 LH3 	    1.1     TS02
+CS02	 SEC06	  Winter       2023 LH3 	    1.2     TS03
+CS03	 SEC07	  Summer       2024 LH1 	    2.1     TS01
+CS04	 SEC08	  Spring       2024 LH2 	    1.2     TS02
+CM01	 SEC09	  Spring       2024 LH1 	    1.1     TS03
+CM02	 SEC10	  Summer       2023 LH2 	    1.1     TS01
+
+==== TEACHES ====
+ID    COURSE_I SEC_ID	SEMEST	     YEAR
+----- -------- -------- ------ ----------
+INS01 MA01     SEC01	Fall	     2020
+INS02 MA02     SEC02	Winter	     2021
+INS03 CS01     SEC05	Fall	     2021
+INS03 CS04     SEC08	Spring	     2024
+INS04 CS02     SEC06	Winter	     2023
+INS05 CS03     SEC07	Summer	     2024
+INS06 MA03     SEC03	Summer	     2022
+INS07 CM02     SEC10	Summer	     2023
+INS08 CM01     SEC09	Spring	     2024
+INS09 MA04     SEC04	Spring	     2022
+
+
+==== STUDENT ====
+ID    NAME		   DEPT_NAME		  TOT_CRED
+----- -------------------- -------------------- ----------
+ST001 Sourabh		   MACS 			90
+ST002 Sunil		       MACS 			85
+ST003 Vishal		   MACS 			88
+ST004 Aryan		       MACS 			70
+ST005 Nagender		   MACS 			95
+ST006 Harsh		       MACS 			84
+ST007 Apurv		       MACS 			82
+ST008 Kanhaiya		   MACS 			83
+ST009 Satish		   Chemical			60
+ST010 Yash		       Chemical			65
+ST011 Isha		       Chemical			66
+ST012 Aditya		   Chemical			72
+ST013 Akash		       Computer			78
+ST014 Anish		       Computer			55
+ST015 Deepak		   Computer			75
+
+
+==== TAKES ====
+ID    COURSE_I SEC_ID	SEMEST	     YEAR GR
+----- -------- -------- ------ ---------- --
+ST001 MA01     SEC01	Fall	     2020 AB
+ST002 MA02     SEC02	Winter	     2021 BA
+ST003 MA02     SEC02	Winter	     2021 AB
+ST004 MA02     SEC02	Winter	     2021 BC
+ST005 MA02     SEC02	Winter	     2021 AC
+ST006 MA03     SEC03	Summer	     2022 AB
+ST007 MA01     SEC01	Fall	     2020 AB
+ST008 MA03     SEC03	Summer	     2022 BA
+ST009 CM01     SEC09	Spring	     2024 CC
+ST010 CM01     SEC09	Spring	     2024 BB
+
+
+==== ADVISOR ====
+S_ID  I_ID
+----- -----
+ST001 INS01
+ST002 INS01
+ST003 INS02
+ST004 INS02
+ST005 INS03
+ST006 INS03
+ST007 INS04
+ST008 INS04
+ST009 INS05
+ST010 INS05
+ST011 INS06
+ST012 INS06
+ST013 INS07
+ST014 INS07
+ST015 INS08
+
+==== TIME_SLOT ====
+TIME D	 START_HR  START_MIN	 END_HR    END_MIN
+---- - ---------- ---------- ---------- ----------
+TS01 S	       10	   0	     11 	 0
+TS02 M	       11	   0	     12 	 0
+TS03 T	       12	   0	     13 	 0
+
+===== PREREQ =====
+COURSE_I PREREQ_I
+-------- --------
+CM02	 CM01
+CS02	 CS01
+CS03	 CS01
+CS04	 CS01
+MA02	 MA01
+MA03	 MA01
+MA04	 MA01
+
